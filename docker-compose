@@ -1,1 +1,29 @@
-
+services: 
+  #Spring Boot Application 
+  spring-boot-app: 
+  image: backend 
+  ports: 
+    - "Θ.Θ.Θ.0:8001:8801" 
+  environment: 
+    - SPRING DATASOURCE URL=jdbc:mysql://mysql:3306/api_etudiant 
+    - SPRING DATASOURCE_USERNAME=root 
+    - SPRING DATASOURCE PASSWORD=root 
+    - SPRING DATASOURCE DRIVER CLASS_NAME=com.mysql.cj.jdbc.Driver 
+    - SPRING JPA HIBERNATE DDL AUTO-update 
+  depends on: 
+  - mysql 
+  #MySQL Database 
+  mysql: 
+    image: mysql:5.7 
+    restart: always 
+    environment: 
+      MYSQL DATABASE: 'api etudiant 
+      MYSQL ROOT USERNAME: 'root' 
+      MYSQL ROOT PASSWORD: 'root' 
+    ports: 
+      - '0.0.0.8:3306:3306' 
+    volumes: 
+      - api etudiant:/var/lib/mysql 
+  #liste des volumes 
+volumes: 
+  api_etudiant:
