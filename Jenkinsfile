@@ -13,7 +13,7 @@ pipeline {
 
         stage("Clone repo") { 
             steps {
-                sh "git clone https://github.com/MaBouz/backend.git" 
+                sh "git clone https://github.com/Sihem8/backend.git" 
             } 
         }
 
